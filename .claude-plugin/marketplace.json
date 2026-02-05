@@ -1,0 +1,21 @@
+{
+    "name": "phpstorm-marketplace",
+    "owner": {
+        "name": "JetBrains",
+        "email": "phpstorm-support@jetbrains.com"
+    },
+    "metadata": {
+        "description": "Skills for your agent for working with PhpStorm",
+        "version": "1.0.0"
+    },
+    "plugins": [
+        {
+            "name": "phpstorm-plugin",
+            "source": "./",
+            "description": "PhpStorm plugin for advanced IDE integration",
+            "version": "1.0.0",
+            "keywords": ["phpstorm", "php", "ide", "agent"],
+            "category": "productivity"
+        }
+    ]
+}

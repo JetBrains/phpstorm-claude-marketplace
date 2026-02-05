@@ -1,0 +1,9 @@
+{
+    "name": "phpstorm-plugin",
+    "version": "1.0.0",
+    "description": "PhpStorm plugin for advanced IDE integration",
+    "author": {
+        "name": "JetBrains"
+    },
+    "keywords": ["phpstorm", "php", "ide", "agent"]
+}
