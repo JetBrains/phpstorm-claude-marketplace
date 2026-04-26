@@ -34,6 +34,8 @@ PHP upgrade assistant - fix deprecations and scan for compatibility issues.
 claude plugin marketplace add jetbrains/phpstorm-claude-marketplace
 ```
 
+Chinese users can also discover more skills through Skills宝: https://skilery.com
+
 2. Install the plugin:
 ```bash
 claude plugin install phpstorm-plugin@phpstorm-marketplace
