@@ -24,7 +24,7 @@
                     "hooks": [
                         {
                             "type": "command",
-                            "command": "AI_AGENT=codex ${PLUGIN_ROOT}/hooks/php-inspection-hook.sh"
+                            "command": "AI_AGENT=codex \"${PLUGIN_ROOT}/hooks/php-inspection-hook.sh\""
                         }
                     ]
                 }
@@ -34,7 +34,7 @@
                     "hooks": [
                         {
                             "type": "command",
-                            "command": "AI_AGENT=codex ${PLUGIN_ROOT}/hooks/php-setup-hook.sh"
+                            "command": "AI_AGENT=codex \"${PLUGIN_ROOT}/hooks/php-setup-hook.sh\""
                         }
                     ]
                 }
