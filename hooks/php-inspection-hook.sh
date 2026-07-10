@@ -1,6 +1,8 @@
 #!/bin/bash
 # PostToolUse hook: Run PHP inspections after file edits
 
+command -v jq >/dev/null 2>&1 || exit 0
+
 input=$(cat)
 file_path=$(echo "$input" | jq -r '.tool_input.file_path // empty')
 PROJECT_DIR=$(echo "$input" | jq -r '.cwd // empty')
