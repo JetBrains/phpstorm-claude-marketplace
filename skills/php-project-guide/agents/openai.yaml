@@ -1,0 +1,14 @@
+interface:
+  display_name: "PHP Project Guide"
+  short_description: "Foundational PHP project knowledge for AI agents."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "phpstorm"
+      description: "PhpStorm MCP server"
+      transport: "streamable_http"
+      url: "http://127.0.0.1:64342/stream"

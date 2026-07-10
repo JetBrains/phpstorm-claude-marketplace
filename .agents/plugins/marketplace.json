@@ -1,0 +1,20 @@
+{
+    "name": "phpstorm-marketplace",
+    "interface": {
+        "displayName": "PhpStorm Marketplace"
+    },
+    "plugins": [
+        {
+            "name": "phpstorm-plugin",
+            "source": {
+                "source": "local",
+                "path": "./"
+            },
+            "policy": {
+                "installation": "AVAILABLE",
+                "authentication": "ON_INSTALL"
+            },
+            "category": "productivity"
+        }
+    ]
+}

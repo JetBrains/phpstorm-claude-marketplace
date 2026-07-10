@@ -19,7 +19,7 @@ Before you start, please:
 1. Fork the repository.
 2. Create a branch for your change.
 3. Make your edits.
-4. Test hooks and skills with a real PhpStorm + Claude Code setup if possible.
+4. Test hooks and skills with a real PhpStorm + AI agent setup if possible.
 5. Open a pull request.
 
 In your pull request description, briefly explain:

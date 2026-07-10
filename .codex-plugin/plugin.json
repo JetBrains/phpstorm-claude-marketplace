@@ -1,0 +1,45 @@
+{
+    "name": "phpstorm-plugin",
+    "version": "1.0.1",
+    "description": "PhpStorm plugin for advanced IDE integration",
+    "author": {
+        "name": "JetBrains"
+    },
+    "repository": "https://github.com/JetBrains/phpstorm-claude-marketplace",
+    "license": "MIT",
+    "interface": {
+        "displayName": "PhpStorm Plugin",
+        "shortDescription": "PhpStorm plugin for advanced IDE integration",
+        "longDescription": "PhpStorm plugin for advanced IDE integration",
+        "developerName": "JetBrains",
+        "category": "productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": []
+    },
+    "hooks": { 
+        "hooks": {
+            "PostToolUse": [
+                {
+                    "matcher": "Write|Edit|apply_patch",
+                    "hooks": [
+                        {
+                            "type": "command",
+                            "command": "AI_AGENT=codex ${PLUGIN_ROOT}/hooks/php-inspection-hook.sh"
+                        }
+                    ]
+                }
+            ],
+            "SessionStart": [
+                {
+                    "hooks": [
+                        {
+                            "type": "command",
+                            "command": "AI_AGENT=codex ${PLUGIN_ROOT}/hooks/php-setup-hook.sh"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "keywords": ["phpstorm", "php", "ide", "agent"]
+}

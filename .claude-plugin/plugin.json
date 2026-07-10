@@ -1,9 +1,32 @@
 {
     "name": "phpstorm-plugin",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "PhpStorm plugin for advanced IDE integration",
     "author": {
         "name": "JetBrains"
+    },
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Write|Edit|MultiEdit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "AI_AGENT=claude ${CLAUDE_PLUGIN_ROOT}/hooks/php-inspection-hook.sh",
+                    }
+                ]
+            }
+        ],
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "AI_AGENT=claude ${CLAUDE_PLUGIN_ROOT}/hooks/php-setup-hook.sh"
+                    }
+                ]
+            }
+        ]
     },
     "keywords": ["phpstorm", "php", "ide", "agent"]
 }

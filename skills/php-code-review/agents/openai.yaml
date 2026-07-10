@@ -1,0 +1,14 @@
+interface:
+  display_name: "PHP Code Review"
+  short_description: "Review PHP code using PhpStorm inspections."
+
+policy:
+  allow_implicit_invocation: true
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "phpstorm"
+      description: "PhpStorm MCP server"
+      transport: "streamable_http"
+      url: "http://127.0.0.1:64342/stream"

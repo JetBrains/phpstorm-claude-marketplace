@@ -3,13 +3,14 @@
 
 input=$(cat)
 file_path=$(echo "$input" | jq -r '.tool_input.file_path // empty')
+PROJECT_DIR=$(echo "$input" | jq -r '.cwd // empty')
 
 [[ ! "$file_path" =~ \.(php|phtml|php[345]|phps)$ ]] && exit 0
 
-PROJECT_PATH="${CLAUDE_PROJECT_DIR:-}"
+PROJECT_PATH="${CLAUDE_PROJECT_DIR:-$PROJECT_DIR}"
 [[ -z "$PROJECT_PATH" ]] && exit 0
 
-PORT=$(cat "$HOME/.claude/phpstorm/phpstormmcp.port" 2>/dev/null)
+PORT=$(cat "$HOME/.$AI_AGENT/phpstorm/phpstormmcp.port" 2>/dev/null)
 [[ -z "$PORT" ]] && exit 0
 
 relative_path="${file_path#"$PROJECT_PATH"/}"
